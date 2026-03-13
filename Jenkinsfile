@@ -4,10 +4,10 @@ pipeline {
  stages {
 
   stage('Clone Code') {
-   steps {
-    git 'https://github.com/princeapyds/tg_devops_test_feb26.git'
-   }
-  }
+    steps {
+        git branch: 'main', url: 'https://github.com/princeapyds/tg_devops_test_feb26.git'
+    }
+}
 
   stage('Build Docker Image') {
    steps {
